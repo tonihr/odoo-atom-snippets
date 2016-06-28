@@ -302,6 +302,41 @@ ${cursor}
     'prefix': 'ocolspan'
     'body': 'colspan="${1:colspan}"${2}'
 
+  'Odoo Report':
+    'prefix': 'oreport'
+    'body': """
+       <?xml version="1.0" encoding="utf-8"?>
+       <openerp>
+          <data>
+
+              <template id="${1:report_name}">
+                  <t t-foreach="docs" t-as="o">
+                  <div class="header">
+
+                      </div>
+
+                      <div class="page">
+
+                      </div>
+
+                          <div class="footer">
+
+                          </div>
+                  </t>
+              </template>
+
+              <report
+                   id="${1:report_name}"
+                   model="${2:model}"
+                   string="${3:name_to_show}"
+                   report_type="qweb-pdf"
+                   name="${4:addon_name}.${1:report_name}"
+                   file="${4:addon_name}.${1:report_name}"
+               />
+          </data>
+       </openerp>
+"""
+
   'Odoo View Tree':
     'prefix': 'otree'
     'body': """
