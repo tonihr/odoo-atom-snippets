@@ -741,6 +741,12 @@ def ${1:function_name}(self):
         new_id = super(${1:model_name}, self).create(vals)
         return new_id"""
 
+  'Odoo super method':
+    'prefix': 'osupermethod'
+    'body': """
+    res = super(${1:model_name}, self).${2:method}(vals)
+"""
+
   'Odoo Write model':
     'prefix': 'owrite'
     'body': """
