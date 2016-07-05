@@ -800,6 +800,22 @@ ${2}"""
 assert ${1:var} == ${2:var_2} and '${3:ERROR, Message example}'
 """
 
+  'Odoo Python Wizard':
+      'prefix': 'owizardpython'
+      'body': """
+@api.multi
+def action_wizard(self):
+    return {
+      'type': 'ir.actions.act_window',
+      'name': _('${1:wizard_name}'),
+      'res_model': '${2:model}',
+      'view_type': 'form',
+      'view_mode': 'form',
+      'target': 'new',
+      'context': {${3:context}}
+    }
+"""
+
   'Odoo Docstring':
     'prefix': 'odocstring'
     'body': '''
