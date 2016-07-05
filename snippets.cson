@@ -99,6 +99,32 @@
     </openerp>
 """
 
+   'Odoo Wizard view':
+    'prefix': 'owizardview'
+    'body': """
+    <?xml version="1.0" encoding="utf-8"?>
+    <openerp>
+        <data>
+            <record id="view_${1:wizard_name}_form" model="ir.ui.view">
+                <field name="name">view.${1:wizard_name}.contract.form</field>
+                <field name="model">${2:model}</field>
+                <field name="arch" type="xml">
+                    <form string="${3:Title}">
+                        <sheet>
+                            <group name="main">
+                                <field name="${4:field_name}" />
+                            </group>
+                            <footer><button name="function_ok" string="Accept" type="object" class="oe_highlight"/>
+                            or
+                           	<button string="Cancel" class="oe_link" special="cancel"/></footer>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+        </data>
+    </openerp>
+"""
+
    'Odoo Record Inherit':
     'prefix': 'orecordinherit'
     'body': """
@@ -939,3 +965,4 @@ promote its widespread use.
 
 To contribute to this module, please visit http://odoo-community.org.
 """
+
