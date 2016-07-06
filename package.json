@@ -1,0 +1,24 @@
+{
+  "name": "odoo-atom-snippets",
+  "version": "0.0.0",
+  "description": "Odoo 8 snippets for Atom. Improve your Odoo development and make it fast very easily! Made by Daniel Rodriguez and Carlos Alba.",
+  "engines": {
+    "atom": "*"
+  },
+  "keywords": [
+    "snippets",
+    "odoo",
+    "openerp",
+    "python",
+    "xml"
+  ],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drl9319/odoo-atom-snippets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/drl9319/odoo-atom-snippets/issues"
+  },
+  "license": "GNU"
+}
