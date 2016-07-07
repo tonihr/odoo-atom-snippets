@@ -805,6 +805,17 @@ def ${1:function_name}(self):
 def _onchange_${2:function_name}(self):
     ${3}"""
 
+  'Odoo Default Get':
+    'prefix': 'odefaultget'
+    'body': """
+@api.model
+def default_get(self, fields):
+  res = super(${1:model_name}, self).default_get(fields)
+  context = dict(self._context)
+  ${2:var_name} = context.get('${2:var_name}', False)
+  res.update({'${3:field_name}': ${2:var_name}})
+  return res"""
+
   'Odoo Api Constrains':
     'prefix': 'oapiconstrains'
     'body': """
