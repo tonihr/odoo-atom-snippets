@@ -262,6 +262,20 @@ ${5}
 ${3}
 """
 
+  'Odoo Calendar Xml':
+    'prefix': 'ocalendar'
+    'body': """
+ <record id="view_${1:view_ref}_calendar" model="ir.ui.view">
+     <field name="name">${2:view_name}</field>
+     <field name="model">${3:model}</field>
+     <field name="arch" type="xml">
+         <calendar string="${4:string}" date_start="${5:field_date}" color="${6:color_field}">
+             <field name="${7:field_to_show}" />
+         </calendar>
+     </field>
+ </record>
+"""
+
   'Odoo View Notebook':
     'prefix': 'onotebook'
     'body': """<notebook>
@@ -992,4 +1006,3 @@ promote its widespread use.
 
 To contribute to this module, please visit http://odoo-community.org.
 """
-
