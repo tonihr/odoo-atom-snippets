@@ -1,6 +1,6 @@
 {
   "name": "odoo-atom-snippets",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Odoo 8 snippets for Atom. Improve your Odoo development and make it fast very easily! Made by Daniel Rodriguez and Carlos Alba.",
   "engines": {
     "atom": "*"
