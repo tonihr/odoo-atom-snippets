@@ -576,6 +576,15 @@ class ${1:ModelName}(models.Model):
     ${3}
 """
 
+  'Odoo ModelInherit':
+    'prefix': 'omodelinherit'
+    'body': """
+class ${1:ModelName}(models.Model):
+    _inherit = '${2:name}'
+
+    ${3}
+"""
+
   'Odoo Inherit':
     'prefix': 'oinherit'
     'body': """_inherit = 'model_name'"""
